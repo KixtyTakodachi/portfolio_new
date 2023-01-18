@@ -1,0 +1,89 @@
+.abilities{
+    padding-top: 6px;
+    &__wrapper{
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        //grid-template-rows: repeat(2, minmax(270px, 1fr));
+        grid-auto-rows: minmax(270px, 1fr);
+        gap: 13px;
+    }
+    &__item{
+        border: 1px solid #000;
+        padding: 30px 29px 25px 30px;
+        &__title{
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 21px;
+            color: black;
+            font-weight: 700;
+        }
+        &__descr{
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+            color: black;
+            font-weight: 500;
+        }
+    }
+    .bars{
+        margin-top: 120px;
+        //display: grid;
+        //grid-template-columns: repeat(2,350px);
+        //grid-template-rows: repeat(2,60px);
+        //grid-auto-rows: 70px;
+        //column-gap: 45px;
+        //row-gap: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &__item{
+            margin-bottom: 30px;
+            &__info{
+                display: flex;
+                justify-content: space-between;
+            }
+            &__title{
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 700;
+                position: relative;
+                padding-left: 13px;
+                @include before_circle;
+                &:before{
+                    top: -8px;
+                }
+            }
+            &__bar{
+                margin-top: 20px;
+                width: 350px;
+                height: 14px;
+                background-color: #E8E4DE;
+                border-radius: 4px;
+            }
+            &__fill{
+                background-color: $main_color;
+                height: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+#jquery{
+    .abilities__item__img{
+        margin-top: 15px;
+    }
+    .abilities__item__title{
+        margin-top: 34px;
+    }
+}
+
+#mongo{
+    .abilities__item__img{
+        margin-top: 8px;
+    }
+    .abilities__item__descr{
+        margin-top: 32px;
+    }
+}
