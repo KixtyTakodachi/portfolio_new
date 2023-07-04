@@ -265,7 +265,7 @@
     }
     .abilities{
         &__wrapper{
-            grid-template: repeat(7, 270px) / 270px;
+            grid-template: repeat(4, 270px) / 270px;
             padding: 20px 15px 0 15px;
         }
         .bars{
